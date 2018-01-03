@@ -20,6 +20,11 @@ const routes: Routes = [
     loadChildren: '../admin/admin.module#AdminModule'
   },
   {
+    path: 'datatable',
+    canActivate: [AuthGuardService],
+    loadChildren: '../datatable/datatable.module#DatatableModule'
+  },
+  {
     path: '**',
     component: NotFoundComponent
   }
